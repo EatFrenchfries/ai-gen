@@ -46,7 +46,7 @@ const ChatGPT = memo(() => {
   }
 
   return (
-    <div className="w-full h-full min-h-screen flex flex-col items-center bg-gradient-to-tr from-indigo-400 to-pink-400">
+    <div className="w-full h-full max-h-screen min-h-screen flex flex-col items-center bg-gradient-to-tr from-indigo-400 to-pink-400">
       <Head>
         <title>ChatGPT</title>
       </Head>

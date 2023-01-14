@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         temperature: 0.6,
         max_tokens: 1000,
         top_p: 1,
-        frequency_penalty: 0.5,
+        frequency_penalty: 0,
         presence_penalty: 0
       })
       const data = response.data.choices[0].text.trim().length < 1 ? 'Hi' : response.data.choices[0].text
