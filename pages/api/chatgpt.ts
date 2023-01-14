@@ -23,7 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         model: 'text-davinci-003',
         prompt: `${req.body.result}`,
         temperature: 0.4,
-        max_tokens: 300,
+        max_tokens: 1000,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0
