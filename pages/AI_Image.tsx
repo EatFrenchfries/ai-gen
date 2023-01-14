@@ -27,8 +27,12 @@ const AI_Image = () => {
       },
       body: JSON.stringify({ text })
     })
-    const data = await res.json()
-    setResults(data.data)
+    if (res.ok) {
+      const data = await res.json()
+      setResults(data.data)
+    } else {
+      alert('請重新嘗試')
+    }
     setIsFetching(false)
   }
   return (

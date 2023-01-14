@@ -35,7 +35,12 @@ const ChatGPT = memo(() => {
       },
       body: JSON.stringify({ result })
     })
-    const data = await res.json()
+    let data: { id: string; data: string }
+    if (res.ok) {
+      data = await res.json()
+    } else {
+      data = { id: uuidv4(), data: '對不起，我不知道要怎麼回覆你。' }
+    }
     setConversation(prev => [...prev, { id: data.id, user: 'ai', text: `${data.data.trim()}` }])
     serIsFetching(false)
   }
