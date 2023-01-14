@@ -18,7 +18,7 @@ const AI_Image = () => {
   const handleClick = async () => {
     setIsFetching(true)
     setResults([])
-    const text = prompt
+    const text = prompt.length > 0 ? prompt : 'A cute cat'
     setPrompt('')
     const res = await fetch('/api/ai_image', {
       method: 'POST',
@@ -29,7 +29,11 @@ const AI_Image = () => {
     })
     if (res.ok) {
       const data = await res.json()
-      setResults(data.data)
+      if (res.status === 504) {
+        alert(data.data)
+      } else {
+        setResults(data.data)
+      }
     } else {
       alert('請重新嘗試')
     }

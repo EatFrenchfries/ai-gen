@@ -9,7 +9,7 @@ const openai = new OpenAIApi(configuration)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const vercel = setTimeout(
     () =>
-      res.json({
+      res.status(504).json({
         data: '因為沒有付錢，所以服務端的響應時間不能超過10秒。'
       }),
     1000 * 9
