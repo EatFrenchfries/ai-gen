@@ -43,6 +43,12 @@ const AI_Image = () => {
     <div className="w-full h-full min-h-screen flex flex-col items-center bg-gradient-to-tr from-indigo-400 to-pink-400 gap-5 relative">
       <Head>
         <title>AI-Image</title>
+        <link rel="icon" href="/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="AI-Image" />
+        <meta property="og:url" content="https://ai-gen-eatfrenchfries.vercel.app/AI_Image" />
+        <meta property="og:image" content="/ai-gen.png" />
+        <meta property="og:description" content="AI-Image can generate pictures depend on the text." />
       </Head>
       <Header />
       <div className="w-full h-full flex flex-col gap-4 items-center mb-4 overflow-y-auto">

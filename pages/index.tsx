@@ -8,7 +8,12 @@ const Home: NextPage = () => {
     <div className="h-full min-h-screen flex flex-col items-center bg-gradient-to-tr from-indigo-400 to-pink-400 ">
       <Head>
         <title>AI-Generator</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="AI-Generator" />
+        <meta property="og:url" content="https://ai-gen-eatfrenchfries.vercel.app" />
+        <meta property="og:image" content="/ai-gen.png" />
+        <meta property="og:description" content="This website integrate OpenAI's simple ChatGPT completion and DALL·E 2 image generators." />
       </Head>
       <Header />
       <div className="mt-[200px] flex gap-5 flex-col sm:flex-row">

@@ -49,6 +49,12 @@ const ChatGPT = memo(() => {
     <div className="w-full h-full max-h-screen min-h-screen flex flex-col items-center bg-gradient-to-tr from-indigo-400 to-pink-400">
       <Head>
         <title>ChatGPT</title>
+        <link rel="icon" href="/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="ChatGPT" />
+        <meta property="og:url" content="https://ai-gen-eatfrenchfries.vercel.app/ChatGPT" />
+        <meta property="og:image" content="/ai-gen.png" />
+        <meta property="og:description" content="ChatGPT can answer your question automatically." />
       </Head>
       <Header />
       <div className="w-full min-h-0 flex-1 max-w-3xl flex flex-col gap-4 p-2 pt-4 justify-between bg-gradient-to-tr from-indigo-300 to-pink-300 md:m-5 md:rounded-lg md:relative ">
